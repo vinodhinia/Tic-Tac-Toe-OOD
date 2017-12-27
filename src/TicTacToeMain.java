@@ -19,9 +19,9 @@ public class TicTacToeMain {
    
    /** Constructor to setup the game */
    public TicTacToeMain() {
-	  intelligentC = new IntelligentComputerPlayer();
-	  player = new HumanPlayer();
-	  computer = new ComputerPlayer();
+      intelligentC = new IntelligentComputerPlayer();
+      player = new HumanPlayer();
+      computer = new ComputerPlayer();
       board = new Board(); 
       initGame();
       do {
