@@ -41,7 +41,7 @@ public class TicTacToeMain {
  
    /** Check the state of the game */
    public void checkState() {
-	   if (currentState == GameState.X_WON) {
+	if (currentState == GameState.X_WON) {
            System.out.println("'X' won! Bye!");
         } else if (currentState == GameState.O_WON) {
            System.out.println("'O' won! Bye!");
