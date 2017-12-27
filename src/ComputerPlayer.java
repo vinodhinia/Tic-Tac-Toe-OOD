@@ -2,10 +2,12 @@ import java.util.Random;
 /**
  * The Computer is one of the Player of Tic Tac Toe Game
  */
-public class Computer {
+public class ComputerPlayer implements Player{
 	
 	/** Random Computer move - as per requirements*/
-	public void computerMove(Board board) {
+	@Override
+	public void move(Board board) {
+		// TODO Auto-generated method stub
 		int min =1, max = 9;
 		Random rn = new Random();
 		while(true) {

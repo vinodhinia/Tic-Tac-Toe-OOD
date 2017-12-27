@@ -10,29 +10,29 @@ public class TicTacToeMain {
    private GameState currentState; // the current state of the game (of enum GameState)
    private Seed currentPlayer;     // the current player (of enum Seed)
    
-   private Human player;
-   private Computer computer;
-   private IntelligentComputer intelligentC;
+   private HumanPlayer player;
+   private ComputerPlayer computer;
+   private IntelligentComputerPlayer intelligentC;
  
    private static Scanner in = new Scanner(System.in);  // input Scanner
  
    
    /** Constructor to setup the game */
    public TicTacToeMain() {
-	   intelligentC = new IntelligentComputer();
-	   player = new Human();
-	   computer = new Computer();
+	   intelligentC = new IntelligentComputerPlayer();
+	   player = new HumanPlayer();
+	   computer = new ComputerPlayer();
       board = new Board(); 
       initGame();
       do {
-    	 player.playerMove(board, Seed.SYMBOL_X); // update the content, currentRow and currentCol
+    	 player.move(board); // update the content, currentRow and currentCol
          board.displayBoard();
          updateGame(currentPlayer);
          checkState();
          if(currentState == GameState.PLAYING) {
         	 System.out.println("Player 'O' move\n");
-        	 //computer.computerMove();
-        	 intelligentC.bestIntelligentComputerMove(board);
+        	 //computer.move(board);
+        	 intelligentC.move(board);
 	         board.displayBoard();
 	         updateGame(currentPlayer); // update currentState
 	         checkState();

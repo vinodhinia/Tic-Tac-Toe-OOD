@@ -1,14 +1,17 @@
 
-public class IntelligentComputer {
-
+public class IntelligentComputerPlayer implements Player{
+	
 	/** Intelligent Computer Move */
-	public void bestIntelligentComputerMove(Board board) {
+	@Override
+	public void move(Board board) {
+		// TODO Auto-generated method stub
 		if(!bestMove(Seed.SYMBOL_O, board)) { // Check if computer could win
 			if(!bestMove(Seed.SYMBOL_X, board)) { //Prevent Player X from wining
 				nextMove(board.currentRow,board.currentCol, board); //Make potential move
 			}
 		}
 	}
+
    
    public boolean bestMove(Seed seedContent, Board board) {
 	   // Check if row could be formed with same values on one move
@@ -120,4 +123,6 @@ public class IntelligentComputer {
 		
 		return false;
 	}
+
+	
 }
