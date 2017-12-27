@@ -15,8 +15,7 @@ public class TicTacToeMain {
    private IntelligentComputerPlayer intelligentC;
  
    private static Scanner in = new Scanner(System.in);  // input Scanner
- 
-   
+    
    /** Constructor to setup the game */
    public TicTacToeMain() {
       intelligentC = new IntelligentComputerPlayer();
@@ -30,12 +29,12 @@ public class TicTacToeMain {
          updateGame(currentPlayer);
          checkState();
          if(currentState == GameState.PLAYING) {
-        	 System.out.println("Player 'O' move\n");
-        	 //computer.move(board); //Pluggable Interface
-        	 intelligentC.move(board);
-	         board.displayBoard();
-	         updateGame(currentPlayer); // update currentState
-	         checkState();
+             System.out.println("Player 'O' move\n");
+             //computer.move(board); //Pluggable Interface
+             intelligentC.move(board);
+	     board.displayBoard();
+	     updateGame(currentPlayer); // update currentState
+	     checkState();
          }
       } while (currentState == GameState.PLAYING);  // repeat until game-over
    }
@@ -58,7 +57,6 @@ public class TicTacToeMain {
       currentState = GameState.PLAYING; // Current Game State is PLAYING
    }
   
- 
    public void updateGame(Seed theSeed) {      
       if(board.hasWon(Seed.SYMBOL_X)) { // check if SYMBOL_X has won
     	  currentState = GameState.X_WON;
@@ -66,9 +64,7 @@ public class TicTacToeMain {
     	  currentState = GameState.O_WON;
       else if(board.isTied()) // check if game is a tie
     	  currentState = GameState.TIE;
-   }
-   
-
+   } 
  
    public static void main(String[] args) {
       new TicTacToeMain();  
