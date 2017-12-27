@@ -1,16 +1,16 @@
 # Tic-Tac-Toe-OOD
 - To complie the program ```javac TicTacToeMain.java```
 - To run the program ```java TicTacToeMain```
-**Slot**
+##Slot
 - The Slot class models each individual slot of the game board.
-**Board**
+##Board
 - The Board class models the Tic-Tac-Toe game-board.
-**Player**
+##Player
 - Player is an Interface implemented by HumanPlayer, ComputerPlayer, IntelligentComputerPlayer class.
-**ComputerPlayer**
+##ComputerPlayer
 - The Computer is one of the Player of Tic Tac Toe Game
-**HumanPlayer**
+##HumanPlayer
 - Human is one of the Player of Tic Tac Toe Game
-**IntelligentComputerPlayer**
+##IntelligentComputerPlayer
 - Intelligent computer Player of the game
 
