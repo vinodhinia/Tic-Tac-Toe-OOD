@@ -2,7 +2,7 @@
  * The Board class models the game-board.
  */
 public class Board {  
-	//Board dimensions
+   //Board dimensions
    public static final int ROWS = 3; // Number of rows in the board
    public static final int COLS = 3; // Number of columns in the board
    
@@ -10,6 +10,7 @@ public class Board {
 			   {1,0}, {1,1}, {1,2},
 			   {2,0}, {2,1}, {2,2}};
  
+   //Board is made up of slots
    Slot[][] slots;  
    int currentRow, currentCol;  // the current row and column
  
@@ -44,7 +45,7 @@ public class Board {
       return true; 
    }
  
-
+   /**Check win */
    public boolean hasWon(Seed theSeed) {
 	 //Check if rows is formed with same values
 	 for(int i=0;i<ROWS;i++) {
@@ -69,8 +70,6 @@ public class Board {
                    && slots[2][0].content == theSeed);
    }
    
-   
- 
    /** Display Board */
    public void displayBoard() {
       for (int row = 0; row < ROWS; ++row) {

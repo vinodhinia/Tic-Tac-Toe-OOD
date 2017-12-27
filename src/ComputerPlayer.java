@@ -2,8 +2,7 @@ import java.util.Random;
 /**
  * The Computer is one of the Player of Tic Tac Toe Game
  */
-public class ComputerPlayer implements Player{
-	
+public class ComputerPlayer implements Player{	
     /** Random Computer move - as per requirements*/
     @Override
     public void move(Board board) {
