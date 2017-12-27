@@ -7,7 +7,7 @@ public class ComputerPlayer implements Player{
 	/** Random Computer move - as per requirements*/
 	@Override
 	public void move(Board board) {
-		// TODO Auto-generated method stub
+		// TODO Random implementation can be done better
 		int min =1, max = 9;
 		Random rn = new Random();
 		while(true) {

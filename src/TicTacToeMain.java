@@ -19,9 +19,9 @@ public class TicTacToeMain {
    
    /** Constructor to setup the game */
    public TicTacToeMain() {
-	   intelligentC = new IntelligentComputerPlayer();
-	   player = new HumanPlayer();
-	   computer = new ComputerPlayer();
+	  intelligentC = new IntelligentComputerPlayer();
+	  player = new HumanPlayer();
+	  computer = new ComputerPlayer();
       board = new Board(); 
       initGame();
       do {
@@ -31,7 +31,7 @@ public class TicTacToeMain {
          checkState();
          if(currentState == GameState.PLAYING) {
         	 System.out.println("Player 'O' move\n");
-        	 //computer.move(board);
+        	 //computer.move(board); //Pluggable Interface
         	 intelligentC.move(board);
 	         board.displayBoard();
 	         updateGame(currentPlayer); // update currentState
@@ -40,6 +40,7 @@ public class TicTacToeMain {
       } while (currentState == GameState.PLAYING);  // repeat until game-over
    }
  
+   /** Check the state of the game */
    public void checkState() {
 	   if (currentState == GameState.X_WON) {
            System.out.println("'X' won! Bye!");
@@ -50,6 +51,7 @@ public class TicTacToeMain {
         }
    }
 
+   /** Initialize the game */
    public void initGame() {
       board.init();  // clear the board contents
       currentPlayer = Seed.SYMBOL_X;       // SYMBOL_X plays first

@@ -68,6 +68,8 @@ public class Board {
                    && slots[1][1].content == theSeed
                    && slots[2][0].content == theSeed);
    }
+   
+   
  
    /** Display Board */
    public void displayBoard() {
