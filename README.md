@@ -13,4 +13,5 @@
   - Human is one of the Player of Tic Tac Toe Game
 - **IntelligentComputerPlayer**
   - Intelligent computer Player of the game
-
+- **TicTacToeMain**
+  - The main class for the Tic-Tac-Toe. It acts as the overall controller of the game.
